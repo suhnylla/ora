@@ -5,7 +5,9 @@
 <!-- Show New User, limit 5 -->
 <% @users.each do |user| %>
 	<ul>
-		<li><%= image_tag "seed_avatar.png" %></li>
+		<li><%= link_to profile_page_path(user.id) do %>
+			<%= image_tag "seed_avatar.png" %>
+			<% end %></li>
 		<li><%= user.email %></li>
 	</ul>
 <% end %>
@@ -14,7 +16,7 @@
 
 <% @offers.each do |offer| %>
 	<ul>
-		<li><%= image_tag "seed_picture.jpg" %></li>
+		<li><%=link_to image_tag "seed_picture.jpg" %></li>
 		<li>Title: <%= offer.title %></li>
 		<li>Description: <%= offer.offer_description %></li>
 		<li>Category: <%= offer.offer_category %></li>
