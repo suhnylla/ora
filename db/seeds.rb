@@ -14,12 +14,15 @@ ActiveRecord::Base.transaction do
 	end
 
 	50.times do
+		images_array = ["seed_picture.jpg"]
+
 		Offer.create(
 			:title => Faker::LordOfTheRings.character,
 			:offer_description => Faker::ChuckNorris.fact,
 			:offer_category => Faker::Pokemon.name,
 			:token => rand(1..100),
-			:user_id => rand(1..50)
+			:user_id => rand(1..50),
+			:images => images_array.shuffle.sample
 			)
 	end
 end
