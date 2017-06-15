@@ -1,24 +1,34 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+$git init
+$git add .
+$git commit -m "xx"
 
-Things you may want to cover:
+$git branch --all # see all branches (online-remote & local ones)
+$git branch # you will be able to see only local branch
+```
 
-* Ruby version
+```
+$ git checkout master # go back to my local master branch
+$ git checkout -b "frontend"  #create a branch
+code n code.........
 
-* System dependencies
+$ git add .
+$ git commit -m "xxx"
 
-* Configuration
+$git checkout master
 
-* Database creation
+$ git pull origin master # i update my local master branch with online(remote) master branch
+$ git checkout frontend
+$ git merge master #this merge with my local master
 
-* Database initialization
+solve conflicts if any...if no good,
 
-* How to run the test suite
+$git push origin frontend
+you go to github.com, create PR
+zoe goes to github.com, merge that PR
+inform the rests, they
+$git checkout master
+$git pull origin master
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
