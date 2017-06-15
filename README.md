@@ -3,7 +3,6 @@
 $git init
 $git add .
 $git commit -m "xx"
-
 $git branch --all # see all branches (online-remote & local ones)
 $git branch # you will be able to see only local branch
 ```
@@ -32,3 +31,7 @@ $git checkout master
 $git pull origin master
 
 ```
+
+
+non mac : ctrl+x, Y, enter
+mac: esc, :wq!
