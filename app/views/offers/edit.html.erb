@@ -1,0 +1,10 @@
+<%= link_to "Home", root_path %>
+
+<h1>Update your Ora Offer here</h1>
+<p>Current Offer Information</p>
+
+<%= form_for @offer do |form| %>
+	<%= render partial: '/offers/form', object: form %>
+
+  <%= form.submit %>
+<% end %>
