@@ -1,3 +1,15 @@
 <h1>This is the Homepage</h1>
 
-<%= link_to "sign_up", new_user_registration_path %>
+<%= link_to "Signup", new_user_registration_path %>
+
+<% @offers.each do |offer| %>
+	<ul>
+		<li>Title: <%= offer.title %></li>
+		<li>Description: <%= offer.offer_description %></li>
+		<li>Category: <%= offer.offer_category %></li>
+		<li>Token: <%= offer.token %></li>
+		<li>Photo: <%= offer.photo %></li>
+		<li>Username: <%= offer.user.email if offer.user %></li>
+		<li>Created at: <%= offer.created_at %></li>
+	</ul>
+<% end %>
