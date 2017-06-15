@@ -31,3 +31,7 @@ $git checkout master
 $git pull origin master
 
 ```
+
+
+non mac : ctrl+x, Y, enter
+mac: esc, :wq!
