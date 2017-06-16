@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'static#homepage'
 
+  get 'users/show/:id' => 'users#show', as: 'profile_page'
+
   resources :offers
 
 end
