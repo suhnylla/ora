@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   root 'static#homepage'
 
   resources :offers
-
+  resources :requests
 end

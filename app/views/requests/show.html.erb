@@ -1,0 +1,15 @@
+<%= link_to "Home", root_path %>
+<%= link_to "Back", requests_path %>
+<h1>This is the show page for <%= @request.user.name %></h1>
+
+
+<p>Title : <%= @request.title %></p>
+<% if !(@request.token.empty?) %>
+  <p>Ora coins : <%= @request.token %></p>
+<% else %>
+  <p>Ora coins : You have no more coins left!</p>
+<% end %>
+<p>Category : <%= @request.request_category %></p>
+<p>Description : <%= @request.request_description %></p>
+<p>Created at <%= time_ago_in_words(@request.created_at) %> ago</p>
+
