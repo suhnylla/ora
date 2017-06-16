@@ -8,7 +8,7 @@ class RequestsController < ApplicationController
 	end
 
 	def new
-		@request = request.new
+		@request = Request.new
 	end
 
 	def create
@@ -21,28 +21,28 @@ class RequestsController < ApplicationController
 	end
 
 	def edit
-		@request = request.find(params[:id])
+		@request = Request.find(params[:id])
 	end
 
 	def update
-		@request = request.find(params[:id])
+		@request = Request.find(params[:id])
     @request.update(request_params)
     redirect_to requests_path
 	end
 
 	def show
-		@request = request.find(params[:id])
+		@request = Request.find(params[:id])
 	end
 
 	def destroy
-		@request = request.find(params[:id])
+		@request = Request.find(params[:id])
     @request.destroy
     redirect_to requests_path
 	end
 
 	private
 	def set_request
-		@request = request.find(params[:id])
+		@request = Request.find(params[:id])
 	end
 
 	def check_owner
