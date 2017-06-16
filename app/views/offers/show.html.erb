@@ -4,11 +4,7 @@
 
 
 <p>Title : <%= @offer.title %></p>
-<%# if !(@offer.token.empty?) %>
-<!--   <p>Ora coins : <%#= @offer.token %></p> -->
-<%# else %>
-<!--   <p>Ora coins : You have no more coins left!</p> -->
-<%# end %>
+<p>Ora Coins Asking : <%= @offer.token %> Ora Coins</p>
 <p>Category : <%= @offer.offer_category %></p>
 <p>Description : <%= @offer.offer_description %></p>
 <p>Created at <%= time_ago_in_words(@offer.created_at) %> ago</p>

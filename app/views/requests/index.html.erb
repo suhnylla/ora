@@ -6,11 +6,7 @@
 <%= link_to "Edit Request", edit_request_path(request) %>
 <%= link_to "Delete", request_path(request), method: :delete, data: { confirm: 'Are you sure?' } %>
 <p><%= link_to "Title : #{request.title}", request_path(request) %></p>
-<%# if !(offer.token.empty?) %>
-<!--   <p>Ora coins : <%#= offer.token %></p> -->
-<%# else %>
-<!--   <p>Ora coins : You have no more coins left!</p> -->
-<%# end %>
+<p>Ora Coins Reward : <%= request.token %> Ora Coins</p>
 <p>Category : <%= request.request_category %></p>
 <p>Description : <%= request.request_description %></p>
 <p>Created at <%= time_ago_in_words(request.created_at) %> ago</p>
