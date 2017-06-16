@@ -2,17 +2,17 @@
 <%= link_to "Create a new request", new_request_path %>
 <h1>My Requests</h1>
 
-
 <% @requests.each do |request| %>
-<%= link_to "Edit request", edit_request_path(request) %>
+<%= link_to "Edit Request", edit_request_path(request) %>
 <%= link_to "Delete", request_path(request), method: :delete, data: { confirm: 'Are you sure?' } %>
 <p><%= link_to "Title : #{request.title}", request_path(request) %></p>
-<p>Listing Type : <%= request.property_type %></p>
-<p>Price per Day: <%= request.price %></p>
-<p>Address      : <%= request.address %></p>
-<p>City         : <%= request.city %></p>
-<p>Description  : <%= request.description %></p>
-<p>Listing by   : <%= request.user.username %></p>
+<%# if !(offer.token.empty?) %>
+<!--   <p>Ora coins : <%#= offer.token %></p> -->
+<%# else %>
+<!--   <p>Ora coins : You have no more coins left!</p> -->
+<%# end %>
+<p>Category : <%= request.request_category %></p>
+<p>Description : <%= request.request_description %></p>
 <p>Created at <%= time_ago_in_words(request.created_at) %> ago</p>
 <p>--------------------------------------------------------------</p>
 
